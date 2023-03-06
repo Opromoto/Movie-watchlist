@@ -1,0 +1,198 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0 auto;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+    font-weight: bold;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+    max-width: 600px;
+    color: grey;
+}
+header {
+    background: url(heroBg.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 60%;
+    width: 100%;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #111827;
+}
+.nav {
+    justify-content: space-around;
+    align-items: baseline;
+    width: 90%;
+    margin: auto;
+    color: whitesmoke;
+    text-shadow: 0 0 2px black;
+}
+.nav h1  {
+    font-size: 20px;
+}
+.nav h4 {
+    cursor: pointer;
+    font-size: 3vw;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+.hero {
+    max-width: 90%;
+    margin: 0 auto;
+    border: 1px solid #D1D5DB;
+    border-radius: 6px;
+    box-shadow: 0px 0px 3px #D1D5DB ;
+    background: #fff;
+    margin-bottom: -22px;
+    justify-content: center;
+    align-items: center;
+}
+.hero label, 
+.hero label input,
+.hero button {
+   line-height: 25px;
+   margin-top: auto;
+}
+.hero label input {
+    padding: 5px 0 5px 10px;
+    font-weight: bold;
+    font-size: 1rem;
+    border: none;
+    width: 90%;
+}
+.hero button  {
+    font-weight: bold;
+    padding: 6px 1rem;
+    background: #fff;
+    border: 1px solid #D1D5DB;
+    border-radius: 6px;
+    margin-left: -10;
+}
+
+main {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    margin-top: 60px;
+
+}
+
+/* Movie div */
+
+.movie {
+    padding: 10px auto;
+    margin: 10px auto;
+    gap: 5px;
+    padding: 10px;
+    height: min-content;
+    border-bottom: 3px solid #E5E7EB;
+}
+.movie img {
+    width: 99px;
+    height: calc(99 * 7 /6);
+    border-radius: 2.3px;
+}
+
+.details {
+    flex-direction: column;
+}
+.name {gap: 4px;}
+.name h3{
+    font-weight: 500;
+    font-size: 1rem;
+}
+.name h5 {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 20px;
+}
+.info {
+    /* border: 1px solid slateblue; */
+    padding-top: 5px;
+    font-weight: 400;
+    font-size: 0.4rem;
+    line-height: 20px;
+    gap: 4px;
+    justify-content: space-between;
+    align-items: center;
+}
+h3.rate {
+    
+    /* border: 1px solid slateblue; */
+    justify-self: flex-end;
+    align-self: flex-end;
+}
+
+.plot {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    padding-top: 5px;
+}
+
+/* GENERAL */
+body,
+.details,
+.movie,
+.nav,
+main, 
+.hero,
+.name,
+.info {
+    display: flex;
+}
+.name h3,
+.name h5,
+.info h3,
+.plot p {
+    margin: 0;
+}
+
+/* FOOTER */
+footer {
+    background-color: #585c61;
+    width: 100%;
+    text-align: center;
+    font-size: 1rem;
+    padding: 9px;
+    color: whitesmoke;
+    font-weight: bold;
+}
+/* Font awesome i.e <i> */
+.film {
+    margin: 100px auto;
+    text-align: center;
+}
+.film i {
+    font-size: 90px;
+}
+.fa-plus-circle {
+    padding-left: 2px;
+    font-size: 0.7rem;
+}
+.fa-star {
+    color: gold;
+}
+i.plus {
+    font-size: 1.2rem;
+    margin-right: 5px;
+    color: black;
+} 
+/* Watchlist.html */
+header.header-list {
+    /* height: 300px; */
+    padding-top: 50px;
+    padding-bottom: 70px;
+}
+.list {
+    margin-top: 3px;
+}
