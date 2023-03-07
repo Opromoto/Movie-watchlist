@@ -67,7 +67,7 @@ function renderMovie(arr) {
                     <div class="info">
                         <h3>${movie.Runtime}</h3>
                         <h3>"${movie.Genre}"</h3>
-                        <h3 class="rate" id="${movie.imdbID}"><i class="fa fa-plus-circle" aria-hidden="true" data-add="${movie.imdbID}"></i> ${text}</h3>
+                        <h3 class="rate" data-add="${movie.imdbID}"><i class="fa fa-plus-circle" aria-hidden="true" ></i> ${text}</h3>
                     </div>
                     <div class="plot">
                         <p>${movie.Plot}</p>
