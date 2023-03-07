@@ -30,7 +30,7 @@ document.addEventListener('click', e => {
 async function searchMovie() {
     if (searchText.value){
         movieArray = []
-        let response = await fetch(`http://www.omdbapi.com/?apikey=fa19907d&s=${searchText.value}`)
+        let response = await fetch(`https://www.omdbapi.com/?apikey=fa19907d&s=${searchText.value}`)
         let data = await response.json()
         if(data.Response == "False"){
             alert(data.Error)
@@ -39,7 +39,7 @@ async function searchMovie() {
         movieArray = []    
         mainEl.innerHTML = ""
         for(let movie of data.Search) {
-            let response = await fetch(`http://www.omdbapi.com/?apikey=fa19907d&t=${movie.Title}`)
+            let response = await fetch(`https://www.omdbapi.com/?apikey=fa19907d&t=${movie.Title}`)
             let data = await response.json()
 
 
@@ -88,12 +88,14 @@ let watchlistArray = []
 const addToWatchlist = event => {
     for(let movie of movieArray) {
         if(movie.imdbID === event.target.dataset.add) {
-            if(!watchlistArray.find(item => movie.imdbID == item.imdbID )){
+            if(watchlistArray.find(item => item.imdbID == movie.imdbID )){
+            } else {
                 watchlistArray.push(movie)
                 text = WatchlistTextArr[1]
                 
                 document.getElementById(movie.imdbID).innerHTML = `<i class="fa fa-plus-circle" aria-hidden="true" data-name="${movie.imdbID}"></i> ${text}`
                 
+
             }
         }
     }
@@ -104,7 +106,10 @@ const addToWatchlist = event => {
 
 
 const getWatchlistFromStorage = () => {
-    watchlistArray =  JSON.parse(localStorage.getItem("myWatchlist"))
+    if(JSON.parse(localStorage.getItem("myWatchlist"))) {
+        watchlistArray =  JSON.parse(localStorage.getItem("myWatchlist"))
+    } else {}
+    
 
 }
 
