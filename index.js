@@ -37,15 +37,20 @@ async function searchMovie() {
         }
         
         movieArray = []    
-        mainEl.innerHTML = ""
+        mainEl.innerHTML = ` 
+            <div class="film">
+                <i class="fa fa-spinner fa-spin" aria-hidden="true"></i>
+            </div>
+        `
         for(let movie of data.Search) {
             let response = await fetch(`https://www.omdbapi.com/?apikey=fa19907d&t=${movie.Title}`)
             let data = await response.json()
 
 
             movieArray.push(data)
-            // data)
+            
         }
+        mainEl.innerHTML = ""
         renderMovie(movieArray)
         
     } else {
