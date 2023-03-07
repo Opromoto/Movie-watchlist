@@ -17,15 +17,14 @@ document.addEventListener('click', e => {
 })
 
 const renderToWatchlist = arr => {
-    if(arr.length) {
+    if(!watchlistArray.length) {
         listEl.innerHTML = `
         <div class="film">
             <p>Your watchlist is looking a little empty...</p>
             <h4><a href="index.html"><i class="fa fa-plus-circle plus" aria-hidden="true"></i></i>Let's add some movies!</a></h4>
         </div>
         `
-    }
-    if(watchlistArray.length) {
+    }else if(watchlistArray.length) {
         listEl.innerHTML = ""
         arr.forEach(movie => {
             listEl.innerHTML += `

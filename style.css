@@ -175,7 +175,8 @@ footer {
 .film i {
     font-size: 90px;
 }
-.fa-plus-circle {
+.fa-plus-circle,
+.fa-minus-circle {
     padding-left: 2px;
     font-size: 0.9rem;
 }
